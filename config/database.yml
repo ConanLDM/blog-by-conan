@@ -21,7 +21,7 @@ default: &default
 
 development:
   <<: *default
-  database: blog_by-conan-db
+  database: blog_development
 
   # The specified database role being used to connect to PostgreSQL.
   # To create additional roles in PostgreSQL see `$ createuser --help`.
@@ -77,8 +77,9 @@ test:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
-production:
-  <<: *default
-  database: blog-by-conan-db
-  username: blog
-  password: <%= ENV["BLOG_DATABASE_PASSWORD"] %>
+  production:
+      <<: *default
+      database: blog-by-conan-db
+      username: blog
+      password: <%= ENV["BLOG_DATABASE_PASSWORD"] %>
+      host: dpg-cm12d4i1hbls73ad6ba0-a
