@@ -261,7 +261,7 @@ DEPENDENCIES
   debug
   importmap-rails
   jbuilder
-  pg (~> 1.5.4)
+  pg (~> 1.1)
   puma (>= 6.4.0)
   rails (~> 7.1.2)
   sassc-rails
