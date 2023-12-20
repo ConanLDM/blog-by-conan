@@ -82,3 +82,4 @@ production:
   database: blog-by-conan-db
   username: blog
   password: <%= ENV["BLOG_DATABASE_PASSWORD"] %>
+  host: dpg-cm12d4i1hbls73ad6ba0-a
