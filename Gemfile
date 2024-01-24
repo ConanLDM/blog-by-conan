@@ -48,6 +48,7 @@ gem "bootsnap", require: false
 # gem "image_processing", "~> 1.2"
 
 gem 'bootstrap', '~> 5.3.2'
+gem "cssbundling-rails", "~> 1.4"
 
 gem "sassc-rails"
 

@@ -1,1 +1,48 @@
 <h1>Homepage</h1>
+
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Latest Blog Post</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Archive</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Not Available</a>
+        </li>
+      </ul>
+    </div>
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">Active</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Featured Blog Posts</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Example 1</a></li>
+          <li><a class="dropdown-item" href="#">Example 2</a></li>
+          <li><a class="dropdown-item" href="#">Example 3</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#">Example 4</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About the Blog</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled">Not Available</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<%= render partial: "pages/post_previews" %>
