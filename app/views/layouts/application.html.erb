@@ -11,8 +11,10 @@
   </head>
 
   <body>
-    <h1 class="text-3xl font-bold text-center text-blue-500">Welcome to Blog by Conan</h1>
-      <%= yield %>
+    <h1 class="text-3xl font-bold text-center text-blue-500">Blog by Conan</h1>
+     <main class="container mx-48 mt-64 max-w-5xl px-2 sm:px-6 lg:px-4">
+        <%= yield %>
+      </main>
       <%= render partial: 'shared/footer' %>
   </body>
 </html>
