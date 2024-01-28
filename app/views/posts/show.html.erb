@@ -1,5 +1,8 @@
 <div class="container mx-auto px-4 flex justify-center items-center h-screen">
   <p class="font-sans text-center">This is the first blog entry</p>
+</div>
+
+<div class= "button">
   <button class="px-5 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-blue-600 lg:px-10 rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Enjoying the Blog?</button>
 </div>
 
@@ -14,4 +17,17 @@
   <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r">
     Next
   </button>
+</div>
+
+<div>
+  <label for="blog-like">Like the blog? Give me a rating :)</label>
+  <input list="blog ratings" id="blog-like" name="blog-like" />
+
+  <datalist id="blog ratings">
+    <option value="5"></option>
+    <option value="4"></option>
+    <option value="3"></option>
+    <option value="2"></option>
+    <option value="1"></option>
+  </datalist>
 </div>
