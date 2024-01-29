@@ -52,6 +52,9 @@ gem "cssbundling-rails", "~> 1.4"
 
 gem "sassc-rails"
 
+# For creating a new blog post
+gem "simple_form"
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
