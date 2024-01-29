@@ -12,5 +12,8 @@ Rails.application.routes.draw do
 
   get '/about', to: 'pages#about', as: 'about'
 
+  
+  get 'posts/new', to: 'posts#new', as: 'new_post'
+
   resources :posts
 end
