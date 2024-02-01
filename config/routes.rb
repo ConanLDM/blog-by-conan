@@ -10,8 +10,11 @@ Rails.application.routes.draw do
 
   root 'pages#home', as: 'home'
 
-  get '/about', to: 'pages#about', as: 'about'
-  get "posts", to: "posts#index"
+  get '/about', to: 'pages#about', as: :about
+
+  get 'posts/index', to: 'posts#index', as: :index
+
+  get '/posts/:id', to: 'posts#show', as: :show
 
   get 'posts/new', to: 'posts#new', as: :new_post
 
