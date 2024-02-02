@@ -4,10 +4,6 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
 
-  def new
-    @post = Post.new
-  end
-
   def create
     @post = Post.new(post_params)
     if @post.save
@@ -17,7 +13,14 @@ class PostsController < ApplicationController
     end
   end
 
+  def new
+    @post = Post.new
+  end
+
   def show
+  end
+
+  def home
     @post = Post.find(params[:id])
   end
 
