@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
 
+  resources :posts
+
   root 'pages#home', as: 'home'
 
   get 'about', to: 'pages#about', as: :about
@@ -16,7 +18,5 @@ Rails.application.routes.draw do
 
   get 'posts/:id', to: 'posts#show'
 
-  post '/posts', to: 'posts#create'
-  
   resources :posts
 end
