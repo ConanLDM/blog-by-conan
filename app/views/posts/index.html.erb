@@ -1,12 +1,16 @@
-<ul>
-  <% @posts.each do |post| %>
-    <li><%= post.title %></li>
-    <li><%= post.body %></li>
-  <% end %>
-</ul>
-
 <div class="container">
-  <p>Enjoy this Video while choosing a Blog Post to View</p>
-  <embed type="video/webm" width="250" height="200" />
+  <div class="video">
+    <p>Enjoy this Video while choosing a Blog Post to View</p>
+    <embed type="video/webm" width="250" height="200" />
+  </div>
+  <div class="card">
+    <% @posts.each do |post| %>
+      <div class="max-w-sm rounded overflow-hidden shadow-lg">
+        <div class="px-6 py-4">
+          <h1 class="text-2xl font-semibold text-gray-700"><%= post.title %></h1>
+          <p class="text-xl font-light leading-relaxed text-gray-400 mt-5"><%= post.body %></p>
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>
