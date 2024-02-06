@@ -3,20 +3,28 @@
     <%= f.input :title %>
     <%= f.input :body, as: :text %>
     <%= f.submit "Create Post" %>
-    <% if @post.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
-        <ul>
-        <% @post.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-        </ul>
+  <% end %>
+
+  <% if flash[:notice] %>
+    <div class="alert alert-info d-flex align-items-center" role="alert">
+      <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg>
+      <div>
+        <%= flash[:notice] %>
       </div>
-    <% end %>
+    </div>
+  <% end %>
+
+  <% if flash[:alert] %>
+    <div class="alert alert-warning d-flex align-items-center" role="alert">
+      <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+      <div>
+        <%= flash[:alert] %>
+      </div>
+    </div>
   <% end %>
 </turbo-frame>
 
-<p> Below Form Select Element is for future styling of the Blog Post</p>
+<p>Below Form Select Element is for future styling of the Blog Post</p>
 <select class="form-select" aria-label="Default select example" disabled>
   <option selected>Choose a Blog Type</option>
   <option value="1">Small Post</option>
