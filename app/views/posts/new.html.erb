@@ -9,5 +9,7 @@
     </ul>
   </div>
 
-  <%= render 'form' %>
+  <%= render "modal", title: "New post" do %>
+    <%= render "form", post: @post %>
+  <% end %>
 </div>
