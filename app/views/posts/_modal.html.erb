@@ -1,14 +1,22 @@
-<%= turbo_frame_tag "modal" do %>
-   <div class="modal fade" id="createPostModal" tabindex="-1" aria-labelledby="newPostModalLabel" aria-hidden="true" data-controller="modal" data-action="turbo:before-render@document->modal#hideBeforeRender">
+<%= turbo_frame_tag "modal", class: "fade-in fade-out" do %>
+   <div class="modal fade" id="createPostModal"  class="fixed z-10 inset-0 overflow-y-auto" tabindex="-1" aria-labelledby="newPostModalLabel" aria-hidden="true" data-controller="modal" data-action="turbo:before-render@document->modal#hideBeforeRender">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content" id="modal_content">
                 <div class="modal-header">
                     <h4 class="modal-title" id="newPostModalLabel"><%= title %></h4>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                       <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
 
                 <div class="modal-body " id="modal_body">
                     <%= yield %>
+                </div>
+                <div class="modal-footer">
+                  <%= turbo_frame_tag "modal-footer" do %>
+                    <button type="button" class="btn btn-secondary"> <%= link_to "Homepage", home_path %> </button>
+                    <button type="button" class="btn btn-secondary" data-action="modal#close" aria-label="Close modal">Close</button>
+                  <% end %>
                 </div>
             </div>
         </div>
