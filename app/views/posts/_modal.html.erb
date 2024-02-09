@@ -1,6 +1,6 @@
 <%= turbo_frame_tag "modal", class: "fade-in fade-out" do %>
-   <div class="modal fade" id="createPostModal"  class="fixed z-10 inset-0 overflow-y-auto" tabindex="-1" aria-labelledby="newPostModalLabel" aria-hidden="true" data-controller="modal" data-action="turbo:before-render@document->modal#hideBeforeRender">
-        <div class="modal-dialog modal-dialog-centered" role="document">
+   <div class="modal fade fixed z-10 inset-0 overflow-y-auto" id="createPostModal" id="createPostModal"  tabindex="-1" aria-labelledby="newPostModalLabel" aria-hidden="true" data-controller="modal" data-action="turbo:before-render@document->modal#hideBeforeRender">
+        <div class="modal-dialog modal-dialog-centered" role="document" >
             <div class="modal-content" id="modal_content">
                 <div class="modal-header">
                     <h4 class="modal-title" id="newPostModalLabel"><%= title %></h4>
@@ -13,10 +13,8 @@
                     <%= yield %>
                 </div>
                 <div class="modal-footer">
-                  <%= turbo_frame_tag "modal-footer" do %>
-                    <button type="button" class="btn btn-secondary"> <%= link_to "Homepage", home_path %> </button>
-                    <button type="button" class="btn btn-secondary" data-action="modal#close" aria-label="Close modal">Close</button>
-                  <% end %>
+                    <button type="button" id="btnCloseCategories" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary active" role="button" aria-pressed="true"><%= link_to "Homepage", home_path %></button>
                 </div>
             </div>
         </div>
