@@ -11,9 +11,11 @@
   </head>
 
   <body>
-    <h1 class="text-3xl font-bold text-center text-blue-500">
-      <%= link_to "Blog by Conan", home_path %>
+  <div class="flex justify-center items-center">
+    <h1 class="text-5xl font-extrabold dark:text-white p-4 ">
+       <%= link_to "Blog by Conan", home_path %>
     </h1>
+  </div>
      <main class="container mx-48 mt-64 max-w-5xl px-2 sm:px-6 lg:px-4">
         <%= yield %>
         <%= turbo_frame_tag "modal", target: "_top" %>
