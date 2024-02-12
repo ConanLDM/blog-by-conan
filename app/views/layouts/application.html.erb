@@ -12,11 +12,14 @@
 
   <body>
   <div class="flex justify-center items-center">
-    <h1 class="text-5xl font-extrabold dark:text-white p-4 ">
-       <%= link_to "Blog by Conan", home_path %>
-    </h1>
+    <%= link_to home_path do %>
+      <h1 class="text-5xl font-extrabold dark:text-white">
+        Blog<small class="ms-2 font-semibold text-gray-500 dark:text-gray-400">by Conan</small>
+      </h1>
+    <% end %>
   </div>
      <main class="container mx-48 mt-64 max-w-5xl px-2 sm:px-6 lg:px-4">
+        <%= render partial: 'shared/navbar' %>
         <%= yield %>
         <%= turbo_frame_tag "modal", target: "_top" %>
       </main>
