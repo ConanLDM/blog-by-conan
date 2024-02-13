@@ -3,6 +3,8 @@
     <p>Enjoy this Video while choosing a Blog Post to View</p>
     <embed type="video/webm" width="250" height="200" />
   </div>
+  <%= render partial: "shared/search_form" %>
+  <%= render 'shared/search_results', results: @results %>
   <div class="card">
     <% @posts.each do |post| %>
       <div class="max-w-sm rounded overflow-hidden shadow-lg">
