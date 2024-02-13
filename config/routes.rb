@@ -18,5 +18,7 @@ Rails.application.routes.draw do
 
   get 'posts/:id', to: 'posts#show'
 
+  get '/posts/search', to: 'posts#search', as: 'posts_search'
+
   resources :posts
 end
