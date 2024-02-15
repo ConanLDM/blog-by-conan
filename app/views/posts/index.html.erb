@@ -1,7 +1,7 @@
 <div class="container">
   <div class="video">
     <p>Enjoy this Video while choosing a Blog Post to View</p>
-    <embed type="video/webm" width="250" height="200" />
+     <%= get_video_iframe('https://www.youtube.com/watch?v=TlgSp2XPCY4&list=PL3mtAHT_eRezB9fnoIcKS4vYFjm23vddb', '1000px', '500px') %>
   </div>
   <%= render partial: "shared/search_form" %>
   <%= render 'shared/search_results', results: @results %>
